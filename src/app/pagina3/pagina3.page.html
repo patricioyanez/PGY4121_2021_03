@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Promediador</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-text color="primary" class="ion-text-center">
+    <h1>Promediar las notas de la asignatura</h1>
+  </ion-text>
+  <br>
+  <ion-input type="number" placeholder="Ingrese nota 1" #nota1></ion-input>
+  <ion-input type="number" placeholder="Ingrese nota 2" #nota2></ion-input>
+  <ion-input type="number" placeholder="Ingrese nota 3" #nota3></ion-input>
+  <br>
+  <ion-button (click)="onClick(nota1, nota2, nota3)" expand="block" fill="clear" shape="round">
+    Promediar
+  </ion-button>
+
+</ion-content>

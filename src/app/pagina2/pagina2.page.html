@@ -8,4 +8,21 @@
   <h1>Hola Mundo</h1>
   <h2>Nombre: {{nombre}}</h2>
   <h2>Edad: {{edad}}</h2>
+
+  
+  <i-item *ngFor="let aux of listado">
+    <ion-text color="primary">
+      <h1>{{aux.nombre}}</h1>
+      <h1>{{aux.direccion}}</h1>
+      <h1>------</h1>
+    </ion-text>
+  </i-item>
 </ion-content>
+
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Pie de página</ion-title>
+  </ion-toolbar>
+</ion-footer>

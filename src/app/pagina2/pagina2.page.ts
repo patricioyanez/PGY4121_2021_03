@@ -11,11 +11,21 @@ export class Pagina2Page implements OnInit {
   nombre  : string;
   edad    : number;
   lista   : [];
-  listado : [
+  listado = [
     {
       id : '1',
-      nombre: 'nombre',
+      nombre: 'Ana',
       direccion: 'vespucio 1501'
+    },
+    {
+      id : '2',
+      nombre: 'Diego',
+      direccion: 'vespucio 20000'
+    },
+    {
+      id : '3',
+      nombre: 'Alberto',
+      direccion: 'vespucio 35000'
     }
   ]
   constructor() {
