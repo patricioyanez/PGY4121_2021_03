@@ -9,12 +9,39 @@
     <h1>Promediar las notas de la asignatura</h1>
   </ion-text>
   <br>
-  <ion-input type="number" placeholder="Ingrese nota 1" #nota1></ion-input>
-  <ion-input type="number" placeholder="Ingrese nota 2" #nota2></ion-input>
-  <ion-input type="number" placeholder="Ingrese nota 3" #nota3></ion-input>
-  <br>
-  <ion-button (click)="onClick(nota1, nota2, nota3)" expand="block" fill="clear" shape="round">
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="4"><ion-input type="number" placeholder="Ing. nota 1" #nota1></ion-input></ion-col>
+      <ion-col size="4"><ion-input type="number" placeholder="Ing. nota 2" #nota2></ion-input></ion-col>
+      <ion-col size="4"><ion-input type="number" placeholder="Ing. nota 3" #nota3></ion-input></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4"><ion-input type="number" placeholder="P% 1" #pon1></ion-input></ion-col>
+      <ion-col size="4"><ion-input type="number" placeholder="P% 2" #pon2></ion-input></ion-col>
+      <ion-col size="4"><ion-input type="number" placeholder="P% 3" #pon3></ion-input></ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+
+
+  <ion-button (click)="onClick(nota1, nota2, nota3, pon1, pon2, pon3)" expand="block" fill="clear" shape="round">
     Promediar
   </ion-button>
+  <div *ngIf="promedio;">
+    <ion-text color="primary">
+      <h1 class="ion-text-center">Su promedio es: {{promedio}}</h1>
+    </ion-text>
 
+    <ion-text color="primary" *ngIf="promedio>=55; else debeRendirExamen">
+      <h1 class="ion-text-center">No debe rendir examen</h1>
+    </ion-text>
+    <ng-template #debeRendirExamen>
+      <ion-text color="danger">
+        <h1 class="ion-text-center">Debe rendir examen :(</h1>
+      </ion-text>
+    </ng-template>
+  </div>  
 </ion-content>
