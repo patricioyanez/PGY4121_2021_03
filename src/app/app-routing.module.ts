@@ -19,6 +19,14 @@ const routes: Routes = [
     path: 'pagina3',
     loadChildren: () => import('./pagina3/pagina3.module').then( m => m.Pagina3PageModule)
   },
+  {
+    path: 'listado-persona',
+    loadChildren: () => import('./listado-persona/listado-persona.module').then( m => m.ListadoPersonaPageModule)
+  },
+  {
+    path: ':id',
+    loadChildren: () => import('./detalle/detalle.module').then( m => m.DetallePageModule)
+  },
 ];
 
 @NgModule({

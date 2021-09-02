@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>listado de Persona</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <div *ngFor="let persona of personas" [routerLink]="['/', persona.id]">
+<!-- bloque de la sentencia ngFor -->
+      <ion-item>
+        <ion-avatar slot="start">
+          <img [src]="persona.foto" />
+        </ion-avatar>
+        <ion-label>{{persona.nombre}}</ion-label>
+      </ion-item>
+    </div>
+
+  </ion-list>
+
+</ion-content>
