@@ -15,5 +15,12 @@ export class ListadoPersonaPage implements OnInit {
   ngOnInit() {
     this.personas = this.personasServicio.getPersonas();
   }
+  ionViewWillEnter() {
+    this.personas = this.personasServicio.getPersonas();
+  }
+  agregar()
+  {
+    this.router.navigate(['/ingresar'])
+  }
 
 }

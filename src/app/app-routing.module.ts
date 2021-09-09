@@ -24,6 +24,10 @@ const routes: Routes = [
     loadChildren: () => import('./listado-persona/listado-persona.module').then( m => m.ListadoPersonaPageModule)
   },
   {
+    path: 'ingresar',
+    loadChildren: () => import('./ingresar/ingresar.module').then( m => m.IngresarPageModule)
+  },
+  {
     path: ':id',
     loadChildren: () => import('./detalle/detalle.module').then( m => m.DetallePageModule)
   },
